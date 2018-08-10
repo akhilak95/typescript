@@ -1,7 +1,7 @@
 class youtubevideo {
   constructor(public videotitle: string, public videotime: string, public totalviews: number, public channelname: string, private channelsubscriber: string, public likes: number,
     public dislikes: number, public discription: string, private TotalComments: number, public publishedon: string, public catagory: string, public comment: string[], public commentorname: string[],
-    public commentorimg: string[], public commentdate: string[], public commentlikes: number[], public commentdislikes: number[], public commentreplies: number[]) {
+    public commentorimg: string[], public commentdate: string[], public commentlikes: number[], public commentdislikes: number[], private commentreplies: number[]) {
     this.videotitle = videotitle;
     this.videotime = videotime;
     this.totalviews = totalviews;
@@ -63,13 +63,11 @@ class youtubevideo {
     return this.comment
 
   }
-  setcomment = (typecomment: string[]) => {
-    this.comment = typecomment;
+  setcomment = (typecomment: string) => {
+    this.comment.push(typecomment)
 
   }
-  getNewComment = () => {
-    return this.comment
-  }
+ 
   getcommentorName = () => {
     return this.commentorname
   }
@@ -106,6 +104,7 @@ class youtubevideo {
 
 }
 
+
 let video1 = new youtubevideo("video1", "9:00", 23345, "channel1", "2K", 467, 34, "this is a video", 3, "Aug 7,2018",
   "Entertainment", ["Nice Video", "cool", "superb"], ["Akhil", "Rohit", "rajat"], ["htpps://abc.in", "htpps://def.in", "htpps://ghi.in"], ["1 hr ago", "3 hr ago", "4 hr ago"], [45, 34, 65], [12, 2, 3], [12, 3, 24]);
 
@@ -121,15 +120,13 @@ let TotalComments = video1.getTotalComments();
 let PublishedDate = video1.getPublishedDate();
 let Catagory = video1.getVideoCatagory();
 let comment = video1.getcomment();
-video1.setcomment(["awesome"])
-let NewcComment = video1.getNewComment();
+let newcomment = video1.setcomment("awesome")
 let CommentorName = video1.getcommentorName();
 let Commnetorimg = video1.getCommentorimg();
 let CommentDate = video1.getCommentdate();
 let commentlikes = video1.getCommentlikes();
 let commentDislikes = video1.getCommentDislikes();
 let CommentReplies = video1.getCommentReplies();
-
 
 console.log("Title Of Video :", VideoTitle);
 console.log("Time :", VideoTime);
@@ -143,7 +140,7 @@ console.log("Total Comments :", TotalComments);
 console.log("Published on :", PublishedDate);
 console.log("Catagory :", Catagory);
 console.log("comments :", comment);
-console.log("New comment :", NewcComment);
+console.log("New comment :", newcomment);
 console.log("Name of Commentor of all comments :", CommentorName);
 console.log("Commentor img of all comment:", Commnetorimg);
 console.log("Date of Comment of all comment :", CommentDate);

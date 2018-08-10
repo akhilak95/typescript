@@ -1,137 +1,140 @@
 var ProfileInfo = /** @class */ (function () {
-    function ProfileInfo(work, professionalskills, university, highschool, currentcity, hometown, otherplaceslived, mobilephones, email, age, sociallinks, dateofbirth, yearofbirth, gender, interestedin, languages, religion, relationship, familymembers, aboutyou, nickname, quotes, lifeevents, numberoffriends) {
+    function ProfileInfo(name, work, professionalskills, university, highschool, currentcity, hometown, otherplaceslived, mobilephones, email, age, sociallinks, dateofbirth, yearofbirth, gender, interestedin, languages, religion, relationship, familymembers, aboutyou, nickname, quotes, lifeevents, numberoffriends) {
         var _this = this;
+        this.getname = function () {
+            return _this.name;
+        };
+        this.setname = function (name) {
+            _this.name = name;
+        };
         this.getwork = function () {
             return _this.work;
         };
-        this.setwork = function () {
-            //add your work
+        this.setwork = function (work) {
+            _this.work.push(work);
         };
         this.getprofessionalskills = function () {
             return _this.professionalskills;
         };
-        this.setprofessionalskills = function () {
-            //add your professional skills
+        this.setprofessionalskills = function (professionalskills) {
+            _this.professionalskills.push(professionalskills);
         };
         this.getuniversity = function () {
             return _this.university;
         };
-        this.setuniversity = function () {
-            //add your university
+        this.setuniversity = function (university) {
+            _this.university.push(university);
         };
         this.gethighschool = function () {
             return _this.highschool;
         };
-        this.sethighschool = function () {
-            //add your high school
+        this.sethighschool = function (highschool) {
+            _this.highschool.push(highschool);
         };
         this.getcurrentcity = function () {
             return _this.currentcity;
         };
-        this.setcurrentcity = function () {
-            //add your current city
+        this.setcurrentcity = function (currentcity) {
+            _this.currentcity = currentcity;
         };
         this.gethometown = function () {
             return _this.hometown;
         };
-        this.sethometown = function () {
-            //add your hometown
+        this.sethometown = function (hometown) {
+            _this.hometown = hometown;
         };
         this.getotherplaceslived = function () {
             return _this.otherplaceslived;
         };
-        this.setotherplaceslived = function () {
-            //add your other places lived
+        this.setotherplaceslived = function (otherplaceslived) {
+            _this.otherplaceslived.push(otherplaceslived);
         };
         this.getmobilephones = function () {
             return _this.mobilephones;
         };
-        this.setmobilephones = function () {
-            //add your mobile phones
+        this.setmobilephones = function (mobilephones) {
+            _this.mobilephones.push(mobilephones);
         };
         this.getemails = function () {
             return _this.email;
         };
-        this.setemails = function () {
-            //add your emails
-        };
         this.getage = function () {
             return _this.age;
         };
-        this.setage = function () {
-            //add your age
+        this.setage = function (age) {
+            _this.age = age;
         };
         this.getsociallinks = function () {
             return _this.sociallinks;
         };
-        this.setsociallinks = function () {
-            //add various social links
+        this.setsociallinks = function (sociallinks) {
+            _this.sociallinks.push(sociallinks);
         };
         this.getdateofbirth = function () {
             return _this.dateofbirth;
         };
-        this.setdateofbirth = function () {
-            //add your date of birth
+        this.setdateofbirth = function (dateofbirth) {
+            _this.dateofbirth = dateofbirth;
         };
         this.getyearofbirth = function () {
             return _this.yearofbirth;
         };
-        this.setyearofbirth = function () {
-            //add your year of birth
+        this.setyearofbirth = function (yearofbirth) {
+            _this.yearofbirth = yearofbirth;
         };
         this.getgender = function () {
             return _this.gender;
         };
-        this.setgender = function () {
-            //set your gender
+        this.setgender = function (gender) {
+            _this.gender = _this.gender;
         };
         this.getintersets = function () {
             return _this.interestedin;
         };
-        this.setintersets = function () {
-            //add your interests
+        this.setintersets = function (interestedin) {
+            _this.interestedin = interestedin;
         };
         this.getlanguages = function () {
             return _this.languages;
         };
-        this.setlanguages = function () {
-            //add your languages
+        this.setlanguages = function (languages) {
+            _this.languages.push(languages);
         };
         this.getreligion = function () {
             return _this.religion;
         };
-        this.setreligion = function () {
-            //set your religion
+        this.setreligion = function (religion) {
+            _this.religion = religion;
         };
         this.getrelationship = function () {
             return _this.relationship;
         };
-        this.setrelationship = function () {
-            //set relationship
+        this.setrelationship = function (relationship) {
+            _this.relationship = relationship;
         };
         this.getfamilymembers = function () {
             return _this.familymembers;
         };
-        this.setfamilymembers = function () {
-            //add your family members
+        this.setfamilymembers = function (familymembers) {
+            _this.familymembers.push(familymembers);
         };
         this.getaboutyou = function () {
             return _this.aboutyou;
         };
-        this.setaboutyou = function () {
-            //add something about you
+        this.setaboutyou = function (aboutyou) {
+            _this.aboutyou = aboutyou;
         };
         this.getnickname = function () {
             return _this.nickname;
         };
-        this.setnickname = function () {
-            // add nickname
+        this.setnickname = function (nickname) {
+            _this.nickname.push(nickname);
         };
         this.getquotes = function () {
             return _this.quotes;
         };
-        this.setquotes = function () {
-            // add some quotes
+        this.setquotes = function (quotes) {
+            _this.quotes.push(quotes);
         };
         this.getlifeevents = function () {
             return _this.lifeevents;
@@ -142,6 +145,7 @@ var ProfileInfo = /** @class */ (function () {
         this.getnumberoffriends = function () {
             return _this.numberoffriends;
         };
+        this.name = name;
         this.work = work;
         this.professionalskills = professionalskills;
         this.university = university;
@@ -268,9 +272,10 @@ var ProfileInfo = /** @class */ (function () {
     };
     return ProfileInfo;
 }());
-var Personalinfo = new ProfileInfo(["student", "at facebook"], ["meanstackdeveloper",
-    "android developer"], ["juit,waknaghat"], ["G.A.V. public svhool,kangra", "D.A.V. college,Kangra"], "Chandigarh", "Kangra", ["solan", "shimla", "manali"], ["34647,91323"], "akhil.ak95@gmail.com", 21, ["yahoolink", "instagramlink"], "April 23", 1996, "male", "women", ["english", "hindi"], "hinduism", "single", ["aman", "raj"], "I like horror movies", ["jack"], ["nothing"], ["Born on April 23,1996", 1996], 678);
+var Personalinfo = new ProfileInfo("Akhil", ["student", "at facebook"], ["meanstackdeveloper",
+    "android developer"], ["juit,waknaghat"], ["G.A.V. public svhool,kangra", "D.A.V. college,Kangra"], "Chandigarh", "Kangra", ["solan", "shimla", "manali"], [678989, 89766709], "akhil.ak95@gmail.com", 21, ["yahoolink", "instagramlink"], "April 23", 1996, "male", "women", ["english", "hindi"], "hinduism", "single", ["aman", "raj"], "I like horror movies", ["jack"], ["nothing"], ["Born on April 23,1996", 1996], 678);
 console.log("Overview :-");
+console.log("Name :", Personalinfo.name);
 console.log("Work :", Personalinfo.work);
 console.log("Studies at :", Personalinfo.university);
 console.log("Lives in :", Personalinfo.currentcity);
@@ -299,7 +304,7 @@ console.log("Languages :", Personalinfo.getlanguages());
 console.log("Religion :", Personalinfo.getreligion());
 console.log("Family and Relationship :-");
 console.log("Relationship :", Personalinfo.getrelationship());
-console.log("Fmily members", Personalinfo.getfamilymembers());
+console.log("Family members", Personalinfo.getfamilymembers());
 console.log("Details about you :-");
 console.log("About You:", Personalinfo.getaboutyou());
 console.log("Nickname:", Personalinfo.getnickname());
@@ -308,3 +313,47 @@ console.log("Life events :-");
 console.log("Life events:", Personalinfo.getlifeevents());
 console.log("Total Friends:-");
 console.log("Total Friends:", Personalinfo.getnumberoffriends());
+var newname = Personalinfo.setname("akhil kumar");
+console.log("set new name :", Personalinfo.getname());
+var newcurrentcity = Personalinfo.setcurrentcity("Banglore");
+console.log("set new current city :", Personalinfo.getcurrentcity());
+var newhometown = Personalinfo.sethometown("New Delhi");
+console.log("set new hometown :", Personalinfo.gethometown());
+var newwork = Personalinfo.setwork("CEO");
+console.log("set new work :", Personalinfo.getwork());
+var newdateofbirth = Personalinfo.setdateofbirth("Oct 20");
+console.log("set new Date Of Birth :", Personalinfo.getdateofbirth());
+var newyearofbirth = Personalinfo.setyearofbirth(1998);
+console.log("set new Year Of Birth :", Personalinfo.getyearofbirth());
+var newage = Personalinfo.setage(20);
+console.log("set new age :", Personalinfo.getage());
+var newgender = Personalinfo.setgender("female");
+console.log("set new gender :", Personalinfo.getgender());
+var newreligion = Personalinfo.setreligion("Jainism");
+console.log("set new religion :", Personalinfo.getreligion());
+var newinterestedin = Personalinfo.setintersets("man");
+console.log("set new interestedin :", Personalinfo.getintersets());
+var newrelationship = Personalinfo.setrelationship("Married");
+console.log("set new relationship :", Personalinfo.getrelationship());
+var newaboutyou = Personalinfo.setaboutyou("I love dogs");
+console.log("set new about you :", Personalinfo.getaboutyou());
+var newprofessionalskills = Personalinfo.setprofessionalskills("Angular");
+console.log("set new professionalskills  :", Personalinfo.getprofessionalskills());
+var newuniversity = Personalinfo.setuniversity("university of delhi");
+console.log("set new work :", Personalinfo.getuniversity());
+var newschool = Personalinfo.sethighschool("Sacred Heart,Chandigarh");
+console.log("set new work :", Personalinfo.gethighschool());
+var newsociallinks = Personalinfo.setsociallinks("orkut");
+console.log("set new social links :", Personalinfo.getsociallinks());
+var newotherplaceslived = Personalinfo.setwork("New Delhi");
+console.log("set new otherplaceslived :", Personalinfo.getotherplaceslived());
+var newphonenumber = Personalinfo.setmobilephones(5785357);
+console.log("set new phonenumber :", Personalinfo.getmobilephones());
+var newnivkname = Personalinfo.setnickname("Akki");
+console.log("set new nickname :", Personalinfo.getnickname());
+var newquotes = Personalinfo.setquotes("Work hard");
+console.log("set new quotes :", Personalinfo.getquotes());
+var newfriends = Personalinfo.setwork("Rachit");
+console.log("set new family members :", Personalinfo.getfamilymembers());
+var newlanguage = Personalinfo.setlanguages("Tamil");
+console.log("set new language :", Personalinfo.getlanguages());

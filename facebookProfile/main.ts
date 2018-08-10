@@ -1,4 +1,5 @@
 class ProfileInfo {
+    public name: string;
     public work: string[];
     public professionalskills: string[];
     public university: string[];
@@ -6,7 +7,7 @@ class ProfileInfo {
     public currentcity: string;
     public hometown: string;
     public otherplaceslived: string[];
-    private mobilephones: string[];
+    private mobilephones: number[];
     private email: string;
     private age: number;
     public sociallinks: string[];
@@ -25,13 +26,14 @@ class ProfileInfo {
     public numberoffriends: number;
 
 
-    constructor(work: string[], professionalskills: string[], university: string[],
+    constructor(name: string, work: string[], professionalskills: string[], university: string[],
         highschool: string[], currentcity: string, hometown: string, otherplaceslived: string[],
-        mobilephones: string[], email: string, age: number, sociallinks: string[], dateofbirth: string,
+        mobilephones: number[], email: string, age: number, sociallinks: string[], dateofbirth: string,
         yearofbirth: number, gender: string, interestedin: string, languages: string[],
         religion: string, relationship: string, familymembers: string[], aboutyou: string,
         nickname: string[], quotes: string[], lifeevents: [string, number], numberoffriends: number) {
 
+        this.name = name;
         this.work = work;
         this.professionalskills = professionalskills;
         this.university = university;
@@ -59,138 +61,143 @@ class ProfileInfo {
 
 
     }
+    getname = () => {
+        return this.name;
+    }
+    setname = (name: string) => {
+        this.name = name;
+    }
     getwork = () => {
         return this.work;
     }
-    setwork = () => {
-        //add your work
+    setwork = (work: string) => {
+        this.work.push(work);
+
     }
     getprofessionalskills = () => {
         return this.professionalskills;
     }
-    setprofessionalskills = () => {
-        //add your professional skills
+    setprofessionalskills = (professionalskills: string) => {
+        this.professionalskills.push(professionalskills)
     }
     getuniversity = () => {
         return this.university;
     }
-    setuniversity = () => {
-        //add your university
+    setuniversity = (university: string) => {
+        this.university.push(university)
     }
     gethighschool = () => {
         return this.highschool;
     }
-    sethighschool = () => {
-        //add your high school
+    sethighschool = (highschool: string) => {
+        this.highschool.push(highschool)
     }
     getcurrentcity = () => {
         return this.currentcity;
     }
-    setcurrentcity = () => {
-        //add your current city
+    setcurrentcity = (currentcity: string) => {
+        this.currentcity = currentcity;
     }
     gethometown = () => {
         return this.hometown;
     }
-    sethometown = () => {
-        //add your hometown
+    sethometown = (hometown: string) => {
+        this.hometown = hometown
     }
     getotherplaceslived = () => {
         return this.otherplaceslived;
     }
-    setotherplaceslived = () => {
-        //add your other places lived
+    setotherplaceslived = (otherplaceslived: string) => {
+        this.otherplaceslived.push(otherplaceslived)
     }
     getmobilephones = () => {
         return this.mobilephones;
     }
-    setmobilephones = () => {
-        //add your mobile phones
+    setmobilephones = (mobilephones: number) => {
+        this.mobilephones.push(mobilephones)
     }
     getemails = () => {
         return this.email;
     }
-    setemails = () => {
-        //add your emails
-    }
+
     getage = () => {
         return this.age;
     }
-    setage = () => {
-        //add your age
+    setage = (age: number) => {
+        this.age = age
     }
     getsociallinks = () => {
         return this.sociallinks;
     }
-    setsociallinks = () => {
-        //add various social links
+    setsociallinks = (sociallinks: string) => {
+        this.sociallinks.push(sociallinks)
     }
     getdateofbirth = () => {
         return this.dateofbirth;
     }
-    setdateofbirth = () => {
-        //add your date of birth
+    setdateofbirth = (dateofbirth: string) => {
+        this.dateofbirth = dateofbirth
     }
     getyearofbirth = () => {
         return this.yearofbirth;
     }
-    setyearofbirth = () => {
-        //add your year of birth
+    setyearofbirth = (yearofbirth: number) => {
+        this.yearofbirth = yearofbirth
     }
     getgender = () => {
         return this.gender;
     }
-    setgender = () => {
-        //set your gender
+    setgender = (gender: string) => {
+        this.gender = this.gender;
     }
     getintersets = () => {
         return this.interestedin;
     }
-    setintersets = () => {
-        //add your interests
+    setintersets = (interestedin: string) => {
+        this.interestedin = interestedin
     }
     getlanguages = () => {
         return this.languages;
     }
-    setlanguages = () => {
-        //add your languages
+    setlanguages = (languages: string) => {
+        this.languages.push(languages)
     }
     getreligion = () => {
         return this.religion;
     }
-    setreligion = () => {
-        //set your religion
+    setreligion = (religion: string) => {
+        this.religion = religion
     }
 
     getrelationship = () => {
         return this.relationship
     }
-    setrelationship = () => {
-        //set relationship
+    setrelationship = (relationship: string) => {
+        this.relationship = relationship
     }
     getfamilymembers = () => {
         return this.familymembers
     }
-    setfamilymembers = () => {
-        //add your family members
+    setfamilymembers = (familymembers: string) => {
+        this.familymembers.push(familymembers)
     }
     getaboutyou = () => {
         return this.aboutyou
     }
-    setaboutyou = () => {
-        //add something about you
+    setaboutyou = (aboutyou: string) => {
+        this.aboutyou = aboutyou
     }
     getnickname = () => {
         return this.nickname
     }
-    setnickname = () => {
-        // add nickname
+    setnickname = (nickname: string) => {
+        this.nickname.push(nickname)
     }
     getquotes = () => {
         return this.quotes
     }
-    setquotes = () => {
-        // add some quotes
+    setquotes = (quotes: string) => {
+        this.quotes.push(quotes)
     }
     getlifeevents = () => {
         return this.lifeevents
@@ -205,7 +212,7 @@ class ProfileInfo {
     getfriends() {
         console.log("These are your friends")
     }
-    
+
     getfriendswithnewPost() {
         console.log("These are your friends with new posts")
     }
@@ -215,12 +222,12 @@ class ProfileInfo {
     getfriendswithsameuniversity() {
         console.log("These are your friends from universities")
     }
-   
+
     getfriendswithsamehighschool() {
         console.log("These are your friends from high school")
     }
     getfriendsfromcurrentcity() {
-        console.log("These are your friends from current city" )
+        console.log("These are your friends from current city")
     }
     getfriendsfromhometown() {
         console.log("These are your friends from hometown")
@@ -306,12 +313,13 @@ class ProfileInfo {
 
 
 }
-let Personalinfo = new ProfileInfo(["student", "at facebook"], ["meanstackdeveloper",
+let Personalinfo = new ProfileInfo("Akhil", ["student", "at facebook"], ["meanstackdeveloper",
     "android developer"], ["juit,waknaghat"], ["G.A.V. public svhool,kangra", "D.A.V. college,Kangra"], "Chandigarh", "Kangra", ["solan", "shimla", "manali"],
-    ["34647,91323"], "akhil.ak95@gmail.com", 21, ["yahoolink", "instagramlink"], "April 23", 1996, "male",
+    [678989, 89766709], "akhil.ak95@gmail.com", 21, ["yahoolink", "instagramlink"], "April 23", 1996, "male",
     "women", ["english", "hindi"], "hinduism", "single", ["aman", "raj"], "I like horror movies", ["jack"], ["nothing"], ["Born on April 23,1996", 1996], 678);
 
 console.log("Overview :-")
+console.log("Name :", Personalinfo.name)
 console.log("Work :", Personalinfo.work)
 console.log("Studies at :", Personalinfo.university)
 console.log("Lives in :", Personalinfo.currentcity)
@@ -344,7 +352,7 @@ console.log("Religion :", Personalinfo.getreligion())
 
 console.log("Family and Relationship :-")
 console.log("Relationship :", Personalinfo.getrelationship())
-console.log("Fmily members", Personalinfo.getfamilymembers())
+console.log("Family members", Personalinfo.getfamilymembers())
 
 console.log("Details about you :-")
 console.log("About You:", Personalinfo.getaboutyou())
@@ -356,3 +364,52 @@ console.log("Life events:", Personalinfo.getlifeevents())
 
 console.log("Total Friends:-")
 console.log("Total Friends:", Personalinfo.getnumberoffriends())
+
+let newname = Personalinfo.setname("akhil kumar")
+console.log("set new name :", Personalinfo.getname())
+
+let newcurrentcity = Personalinfo.setcurrentcity("Banglore")
+console.log("set new current city :", Personalinfo.getcurrentcity())
+let newhometown = Personalinfo.sethometown("New Delhi")
+console.log("set new hometown :", Personalinfo.gethometown())
+let newwork = Personalinfo.setwork("CEO")
+console.log("set new work :", Personalinfo.getwork())
+let newdateofbirth = Personalinfo.setdateofbirth("Oct 20")
+console.log("set new Date Of Birth :", Personalinfo.getdateofbirth())
+let newyearofbirth = Personalinfo.setyearofbirth(1998)
+console.log("set new Year Of Birth :", Personalinfo.getyearofbirth())
+let newage = Personalinfo.setage(20)
+console.log("set new age :", Personalinfo.getage())
+let newgender = Personalinfo.setgender("female")
+console.log("set new gender :", Personalinfo.getgender())
+let newreligion = Personalinfo.setreligion("Jainism")
+console.log("set new religion :", Personalinfo.getreligion())
+let newinterestedin = Personalinfo.setintersets("man")
+console.log("set new interestedin :", Personalinfo.getintersets())
+let newrelationship = Personalinfo.setrelationship("Married")
+console.log("set new relationship :", Personalinfo.getrelationship())
+let newaboutyou = Personalinfo.setaboutyou("I love dogs")
+console.log("set new about you :", Personalinfo.getaboutyou())
+
+
+let newprofessionalskills = Personalinfo.setprofessionalskills("Angular")
+console.log("set new professionalskills  :", Personalinfo.getprofessionalskills())
+let newuniversity = Personalinfo.setuniversity("university of delhi")
+console.log("set new work :", Personalinfo.getuniversity())
+let newschool = Personalinfo.sethighschool("Sacred Heart,Chandigarh")
+console.log("set new work :", Personalinfo.gethighschool())
+let newsociallinks = Personalinfo.setsociallinks("orkut")
+console.log("set new social links :", Personalinfo.getsociallinks())
+let newotherplaceslived = Personalinfo.setwork("New Delhi")
+console.log("set new otherplaceslived :", Personalinfo.getotherplaceslived())
+let newphonenumber = Personalinfo.setmobilephones(5785357)
+console.log("set new phonenumber :", Personalinfo.getmobilephones())
+let newnivkname = Personalinfo.setnickname("Akki")
+console.log("set new nickname :", Personalinfo.getnickname())
+let newquotes = Personalinfo.setquotes("Work hard")
+console.log("set new quotes :", Personalinfo.getquotes())
+let newfriends = Personalinfo.setwork("Rachit")
+console.log("set new family members :", Personalinfo.getfamilymembers())
+let newlanguage = Personalinfo.setlanguages("Tamil")
+console.log("set new language :", Personalinfo.getlanguages())
+
