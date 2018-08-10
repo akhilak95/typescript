@@ -1,6 +1,6 @@
-class youtubevideo {
-  constructor(public videotitle: string, public videotime: string, public totalviews: number, public channelname: string, private channelsubscriber: string, public likes: number,
-    public dislikes: number, public discription: string, private TotalComments: number, public publishedon: string, public catagory: string, public comment: string[], public commentorname: string[],
+class Youtubevideo {
+  constructor(protected videotitle: string, protected videotime: string, private totalviews: number, protected channelname: string, private channelsubscriber: string, public likes: number,
+    public dislikes: number, protected discription: string, private TotalComments: number, public publishedon: string, protected catagory: string, public comment: string[], public commentorname: string[],
     public commentorimg: string[], public commentdate: string[], public commentlikes: number[], public commentdislikes: number[], private commentreplies: number[]) {
     this.videotitle = videotitle;
     this.videotime = videotime;
@@ -67,7 +67,7 @@ class youtubevideo {
     this.comment.push(typecomment)
 
   }
- 
+
   getcommentorName = () => {
     return this.commentorname
   }
@@ -99,14 +99,38 @@ class youtubevideo {
     console.log("you can view all replies on a respective comment")
   }
 
+}
 
+class Music extends Youtubevideo {
+  constructor(videotitle: string, videotime: string, totalviews: number, channelname: string, channelsubscriber: string, public likes: number,
+    dislikes: number, discription: string, TotalComments: number, public publishedon: string, public catagory: string, public comment: string[], public commentorname: string[],
+    public commentorimg: string[], public commentdate: string[], public commentlikes: number[], commentdislikes: number[], commentreplies: number[], public singersname: string[], public numberofsingers: number) {
 
+    super(videotitle, videotime, totalviews, channelname, channelsubscriber, likes, dislikes, discription, TotalComments, publishedon, catagory,
+      comment, commentorname, commentorimg, commentdate, commentlikes, commentdislikes, commentreplies)
+    this.videotitle = videotitle;
+    this.videotime = videotime;
+    this.discription = discription;
+    this.catagory = catagory;
+    this.channelname = channelname;
+    this.numberofsingers = numberofsingers;
+    this.singersname = singersname
 
+  }
+  getsingersname = () => {
+    return this.singersname
+  }
+  getnumberofsingers = () => {
+    return this.singersname.length
+  }
 }
 
 
-let video1 = new youtubevideo("video1", "9:00", 23345, "channel1", "2K", 467, 34, "this is a video", 3, "Aug 7,2018",
+let video1 = new Youtubevideo("video1", "9:00", 23345, "channel1", "2K", 467, 34, "this is a video", 3, "Aug 7,2018",
   "Entertainment", ["Nice Video", "cool", "superb"], ["Akhil", "Rohit", "rajat"], ["htpps://abc.in", "htpps://def.in", "htpps://ghi.in"], ["1 hr ago", "3 hr ago", "4 hr ago"], [45, 34, 65], [12, 2, 3], [12, 3, 24]);
+
+let musicvideo = new Music("Music1", "9:00", 23345, "channel1", "2K", 467, 34, "this is a video", 3, "Aug 7,2018",
+  "Entertainment", ["Nice Video", "cool", "superb"], ["Akhil", "Rohit", "rajat"], ["htpps://abc.in", "htpps://def.in", "htpps://ghi.in"], ["1 hr ago", "3 hr ago", "4 hr ago"], [45, 34, 65], [12, 2, 3], [12, 3, 24], ["A R Rehman","Mohit"], 2);
 
 let VideoTitle = video1.getvideoTitle();
 let VideoTime = video1.getVideoTime();
@@ -119,6 +143,7 @@ let discription = video1.getDiscription();
 let TotalComments = video1.getTotalComments();
 let PublishedDate = video1.getPublishedDate();
 let Catagory = video1.getVideoCatagory();
+let comments = video1.getcomment();
 let CommentorName = video1.getcommentorName();
 let Commnetorimg = video1.getCommentorimg();
 let CommentDate = video1.getCommentdate();
@@ -138,9 +163,9 @@ console.log("Discription :", discription);
 console.log("Total Comments :", TotalComments);
 console.log("Published on :", PublishedDate);
 console.log("Catagory :", Catagory);
-console.log("comments :", video1.getcomment());
+console.log("comments :", comments);
 video1.setcomment("awesome")
-console.log("New comment :",video1.getcomment());
+console.log("New comment :", video1.getcomment());
 console.log("Name of Commentor of all comments :", CommentorName);
 console.log("Commentor img of all comment:", Commnetorimg);
 console.log("Date of Comment of all comment :", CommentDate);
@@ -150,4 +175,6 @@ console.log("Total Replies on all Comment :", CommentReplies)
 video1.getRelatedVideos();
 video1.getautoplay();
 video1.getallreplies();
+console.log("Name of singers :", musicvideo.getsingersname());
+console.log("Total number of singers:", musicvideo.getnumberofsingers())
 
