@@ -44,7 +44,7 @@ var youtubevideo = /** @class */ (function () {
             return _this.discription;
         };
         this.getTotalComments = function () {
-            return _this.TotalComments;
+            return _this.comment.length;
         };
         this.getPublishedDate = function () {
             return _this.publishedon;
@@ -118,8 +118,6 @@ var discription = video1.getDiscription();
 var TotalComments = video1.getTotalComments();
 var PublishedDate = video1.getPublishedDate();
 var Catagory = video1.getVideoCatagory();
-var comment = video1.getcomment();
-var newcomment = video1.setcomment("awesome");
 var CommentorName = video1.getcommentorName();
 var Commnetorimg = video1.getCommentorimg();
 var CommentDate = video1.getCommentdate();
@@ -137,8 +135,9 @@ console.log("Discription :", discription);
 console.log("Total Comments :", TotalComments);
 console.log("Published on :", PublishedDate);
 console.log("Catagory :", Catagory);
-console.log("comments :", comment);
-console.log("New comment :", newcomment);
+console.log("comments :", video1.getcomment());
+video1.setcomment("awesome");
+console.log("New comment :", video1.getcomment());
 console.log("Name of Commentor of all comments :", CommentorName);
 console.log("Commentor img of all comment:", Commnetorimg);
 console.log("Date of Comment of all comment :", CommentDate);

@@ -50,7 +50,7 @@ class youtubevideo {
   }
 
   getTotalComments = () => {
-    return this.TotalComments
+    return this.comment.length
   }
   getPublishedDate = () => {
     return this.publishedon;
@@ -119,14 +119,13 @@ let discription = video1.getDiscription();
 let TotalComments = video1.getTotalComments();
 let PublishedDate = video1.getPublishedDate();
 let Catagory = video1.getVideoCatagory();
-let comment = video1.getcomment();
-let newcomment = video1.setcomment("awesome")
 let CommentorName = video1.getcommentorName();
 let Commnetorimg = video1.getCommentorimg();
 let CommentDate = video1.getCommentdate();
 let commentlikes = video1.getCommentlikes();
 let commentDislikes = video1.getCommentDislikes();
 let CommentReplies = video1.getCommentReplies();
+
 
 console.log("Title Of Video :", VideoTitle);
 console.log("Time :", VideoTime);
@@ -139,8 +138,9 @@ console.log("Discription :", discription);
 console.log("Total Comments :", TotalComments);
 console.log("Published on :", PublishedDate);
 console.log("Catagory :", Catagory);
-console.log("comments :", comment);
-console.log("New comment :", newcomment);
+console.log("comments :", video1.getcomment());
+video1.setcomment("awesome")
+console.log("New comment :",video1.getcomment());
 console.log("Name of Commentor of all comments :", CommentorName);
 console.log("Commentor img of all comment:", Commnetorimg);
 console.log("Date of Comment of all comment :", CommentDate);
